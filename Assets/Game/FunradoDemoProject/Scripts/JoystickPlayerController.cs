@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class JoystickPlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private FloatingJoystick floatingJoystick;
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float _speed;
+    [SerializeField] private FloatingJoystick _floatingJoystick;
+    [SerializeField] private Rigidbody _rb;
 
     
     
@@ -12,15 +12,15 @@ public class JoystickPlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         if(!GameManager.Instance.InteractionEnemy && !GameManager.Instance.GameOver && !GameManager.Instance.LevelDone)
-            PlayerMovement();
+            PlayerMove();
     }
 
 
-    protected void PlayerMovement() 
+    protected void PlayerMove() 
     {
-        Vector3 moveDirection = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;        
-        Vector3 targetVelocity = moveDirection * speed;        
-        rb.velocity = new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.z);
+        Vector3 moveDirection = Vector3.forward * _floatingJoystick.Vertical + Vector3.right * _floatingJoystick.Horizontal;        
+        Vector3 targetVelocity = moveDirection * _speed;        
+        _rb.velocity = new Vector3(targetVelocity.x, _rb.velocity.y, targetVelocity.z);
 
         // Rotate the character towards the movement direction
         if (moveDirection != Vector3.zero)
@@ -28,7 +28,7 @@ public class JoystickPlayerController : MonoBehaviour
             GameManager.Instance.DoesMove = true;            
             Vector3 lookDirection = moveDirection.normalized;
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection, Vector3.up);
-            rb.MoveRotation(targetRotation);
+            _rb.MoveRotation(targetRotation);
         }
         else
         {

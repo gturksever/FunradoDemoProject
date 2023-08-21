@@ -26,7 +26,7 @@ public class AnimController : MonoBehaviour
 
     public void PlayerDeathAnimation()
     {
-        if (GameManager.Instance.InteractionEnemy == true && GameManager.Instance.CanKill == false)
+        if (GameManager.Instance.InteractionEnemy && !GameManager.Instance.CanKill)
         {
             _playerAnimator.SetTrigger("Death");
             _enemyAnimator.SetBool("enemyAttack", true);
@@ -35,10 +35,9 @@ public class AnimController : MonoBehaviour
 
     public void PlayerMoveAnimation()
     {
-        if (GameManager.Instance.DoesMove == false)
-            _playerAnimator.SetBool("Running", false);
-        else
-            _playerAnimator.SetBool("Running", true);
+        
+            _playerAnimator.SetBool("Running", !GameManager.Instance.DoesMove);
+                    
     }
    
 }

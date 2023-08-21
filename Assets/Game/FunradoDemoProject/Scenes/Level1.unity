@@ -1926,7 +1926,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &488678567
 MonoBehaviour:
@@ -1997,7 +1997,7 @@ Transform:
   - {fileID: 8333293282047090615}
   - {fileID: 8333293282771956405}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &582154240
 GameObject:
@@ -2226,7 +2226,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &909655230
 GameObject:
@@ -2610,7 +2610,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 55.798, y: 0, z: 0}
 --- !u!1 &1015844752
 GameObject:
@@ -3534,9 +3534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c88878df6c1d64f8328edcff8a0f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  floatingJoystick: {fileID: 8170153792480387919}
-  rb: {fileID: 2121036595}
+  _speed: 0
+  _floatingJoystick: {fileID: 0}
+  _rb: {fileID: 0}
 --- !u!54 &2121036595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4965,7 +4965,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6319110102543070614
 MeshFilter:
@@ -5266,7 +5266,7 @@ Transform:
   - {fileID: 6288523491876739533}
   - {fileID: 6635437818633731310}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &7167465909020423775
 Transform:
